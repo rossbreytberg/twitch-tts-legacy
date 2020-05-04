@@ -1,4 +1,4 @@
-const tmi = MODULES.tmi;
+﻿const tmi = MODULES.tmi;
 
 class ChannelListener {
   constructor(channelName, onMessage) {

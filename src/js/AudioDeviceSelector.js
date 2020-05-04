@@ -1,4 +1,4 @@
-const DEFAULT_DEVICE_ID = "default";
+﻿const DEFAULT_DEVICE_ID = "default";
 const LOCAL_SETTING_DEVICE_ID = "deviceID";
 
 class AudioRendererSelector {

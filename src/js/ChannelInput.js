@@ -1,4 +1,4 @@
-const ACTIVE_SUFFIX = " (Active)";
+﻿const ACTIVE_SUFFIX = " (Active)";
 const LOCAL_SETTING_CHANNEL_NAME = "channel";
 
 class ChannelInput {

@@ -1,4 +1,4 @@
-const LOCAL_SETTING_VOICE_ID = "voiceID";
+﻿const LOCAL_SETTING_VOICE_ID = "voiceID";
 
 class VoiceSelector {
   constructor(triggerElement, localSettings, synthesizer) {
