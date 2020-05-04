@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="12db4489-46a1-4f87-a2f2-60f08d3ca2e5" Version="1.0.0.0" Publisher="CN=Ross" />
-  <mp:PhoneIdentity PhoneProductId="12db4489-46a1-4f87-a2f2-60f08d3ca2e5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="16107RossBreytberg.TwitchTTS" Version="1.0.1.0" Publisher="CN=8C3455C1-B52D-4009-A7EE-09A46222E635" />
+  <mp:PhoneIdentity PhoneProductId="046f2aa2-ed84-4784-965e-f7e6be725d31" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>TwitchTTS</DisplayName>
-    <PublisherDisplayName>Ross</PublisherDisplayName>
+    <PublisherDisplayName>Ross Breytberg</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Dependencies>

@@ -32,7 +32,9 @@ class ChannelInput {
   }
 
   _selectChannel(channelName) {
-    channelName = channelName.replace(ACTIVE_SUFFIX, "");
+    if (channelName) {
+      channelName = channelName.replace(ACTIVE_SUFFIX, "");
+    }
     if (channelName !== this.getSelectedChannel()) {
       this._localSettings.values[LOCAL_SETTING_CHANNEL_NAME] = channelName;
       this._onChannelChange(channelName);
