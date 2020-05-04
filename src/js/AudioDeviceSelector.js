@@ -10,12 +10,18 @@ class AudioRendererSelector {
   }
 
   getSelectedDeviceID() {
-    const localSetting = this._localSettings.values[LOCAL_SETTING_DEVICE_ID];
-    if (localSetting && localSetting !== DEFAULT_DEVICE_ID) {
+    const selectedMenuID = this._getSelectedMenuItemID();
+    if (selectedMenuID !== DEFAULT_DEVICE_ID) {
       return localSetting;
     }
     return Windows.Media.Devices.MediaDevice.getDefaultAudioRenderId(
       Windows.Media.Devices.AudioDeviceRole.communications,
+    );
+  }
+
+  _getSelectedMenuItemID() {
+    return (
+      this._localSettings.values[LOCAL_SETTING_DEVICE_ID] || DEFAULT_DEVICE_ID
     );
   }
 
@@ -34,7 +40,7 @@ class AudioRendererSelector {
       id: DEFAULT_DEVICE_ID,
       label: "Default",
       onclick: this._getOnClickForDeviceID(menu, DEFAULT_DEVICE_ID),
-      selected: DEFAULT_DEVICE_ID === this.getSelectedDeviceID(),
+      selected: DEFAULT_DEVICE_ID === this._getSelectedMenuItemID(),
       type: "toggle",
     });
     menu.element.appendChild(defaultCommand.element);
@@ -48,7 +54,7 @@ class AudioRendererSelector {
         id: this._getMenuItemID(deviceInfo.id),
         label: deviceInfo.name,
         onclick: this._getOnClickForDeviceID(menu, deviceInfo.id),
-        selected: deviceInfo.id === this.getSelectedDeviceID(),
+        selected: deviceInfo.id === this._getSelectedMenuItemID(),
         type: "toggle",
       });
       menu.element.appendChild(command.element);
@@ -57,9 +63,7 @@ class AudioRendererSelector {
 
   _getOnClickForDeviceID(menu, deviceID) {
     return () => {
-      // Checking the setting directly instead of calling getSelectedDeviceID()
-      // in case it is set to default
-      const previousID = this._localSettings.values[LOCAL_SETTING_DEVICE_ID];
+      const previousID = this._getSelectedMenuItemID();
       const previousItem = menu.getCommandById(this._getMenuItemID(previousID));
       previousItem.selected = false;
       const nextItem = menu.getCommandById(this._getMenuItemID(deviceID));
