@@ -36,7 +36,7 @@
 
     channelListener = new ChannelListener(
       channelInput.getSelectedChannel(),
-      onPlayMessageAsync,
+      onMessage,
     );
 
     new VoiceSelector(
@@ -51,7 +51,7 @@
     channelListener.setChannel(channelName);
   }
 
-  async function onPlayMessageAsync(message) {
+  async function onMessage(message) {
     const audio = new Audio();
     const stream = await synthesizer.synthesizeTextToStreamAsync(message);
     const blob = MSApp.createBlobFromRandomAccessStream(
