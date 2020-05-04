@@ -8,7 +8,7 @@
   const localSettings = Windows.Storage.ApplicationData.current.localSettings;
   const synthesizer = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
 
-  let audioRendererSelector = null;
+  let audioDeviceSelector = null;
   let channelInput = null;
   let channelListener = null;
   let isFirstActivation = true;
@@ -22,7 +22,7 @@
       { width: 310, height: 150 },
     );
 
-    audioRendererSelector = new AudioRendererSelector(
+    audioDeviceSelector = new AudioDeviceSelector(
       document.getElementById(DEVICE_SELECTOR_BUTTON_ID),
       localSettings,
     );
