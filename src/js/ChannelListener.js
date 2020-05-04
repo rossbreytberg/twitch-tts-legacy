@@ -8,6 +8,9 @@ class ChannelListener {
 
   setChannel(channelName) {
     this._client && this._client.disconnect();
+    if (!channelName) {
+      return;
+    }
 
     this._client = new tmi.Client({
       connection: {

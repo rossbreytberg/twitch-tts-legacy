@@ -10,13 +10,15 @@ button {
   outline: none;
 }
 
-button:active,
-button:active:hover {
-  color: #aaa;
+::selection,
+.win-button.win-button-primary,
+.win-dropdown option:checked,
+select[multiple].win-dropdown option:checked {
+  background-color: #0f0e11 !important;
 }
-
-button:hover {
-  color: #ccc;
+.win-flyout,
+.win-settingsflyout {
+  border-color: #0f0e11 !important;
 }
 
 #deviceSelectorButton {
