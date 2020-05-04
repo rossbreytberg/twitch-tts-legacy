@@ -17,6 +17,7 @@
     if (!isFirstActivation) {
       return;
     }
+    isFirstActivation = false;
     await WinJS.UI.processAll();
     Windows.UI.ViewManagement.ApplicationView.getForCurrentView().setPreferredMinSize(
       { width: 310, height: 150 },
@@ -43,7 +44,6 @@
       localSettings,
       synthesizer,
     );
-    isFirstActivation = false;
   };
   WinJS.Application.start();
 
