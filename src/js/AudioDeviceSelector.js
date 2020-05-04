@@ -12,7 +12,7 @@ class AudioDeviceSelector {
   getSelectedDeviceID() {
     const selectedMenuID = this._getSelectedMenuItemID();
     if (selectedMenuID !== DEFAULT_DEVICE_ID) {
-      return localSetting;
+      return selectedMenuID;
     }
     return Windows.Media.Devices.MediaDevice.getDefaultAudioRenderId(
       Windows.Media.Devices.AudioDeviceRole.communications,
