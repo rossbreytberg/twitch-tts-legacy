@@ -1,0 +1,19 @@
+{
+  "name": "twitch-tts",
+  "version": "1.0.0",
+  "description": "A text-to-speech reader for Twitch chat.",
+  "main": "main.js",
+  "author": "Ross Breytberg <ross@rossbreytberg.com>",
+  "license": "Apache-2.0",
+  "repository": "github:rossbreytberg/twitch-tts",
+  "dependencies": {
+    "tmi.js": "^1.5.0",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "build": "webpack --mode production"
+  }
+}

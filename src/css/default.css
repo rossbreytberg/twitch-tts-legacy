@@ -1,0 +1,50 @@
+﻿body {
+  background-color: #6441a5;
+}
+
+button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  outline: none;
+}
+
+button:active,
+button:active:hover {
+  color: #aaa;
+}
+
+button:hover {
+  color: #ccc;
+}
+
+#deviceSelectorButton {
+  margin-left: 4px;
+  position: absolute;
+  left: 85%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#voiceSelectorButton {
+  margin-right: 4px;
+  position: absolute;
+  right: 85%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#channelInput {
+  color: #fff;
+  background-color: transparent;
+  border: solid #fff;
+  border-width: 0 0 1px;
+  left: 50%;
+  outline: none;
+  padding: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
